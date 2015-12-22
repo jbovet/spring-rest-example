@@ -1,6 +1,6 @@
 
 Instructions:
-* git clone 
+git clone git@github.com:jbovet/spring-rest-example.git
 
 if you don't have gradle, just run ./gradlew bootRun
 or you can 
