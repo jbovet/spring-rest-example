@@ -1,6 +1,5 @@
 
-Instructions:
-* git clone 
+Instructions: git clone git@github.com:jbovet/spring-rest-example.git
 
 if you don't have gradle, just run ./gradlew bootRun
 or you can 
@@ -16,4 +15,12 @@ After running bootRun, just test:
         subtract: curl --data '{"a":"12222", "b":"3332"}' -v -X POST -H 'Content-Type:application/json' http://localhost:8080/resta
         
         prime list: curl -v http://localhost:8080/listarPrimos
+
+        list : curl -v http://localhost:8080/listar
+
+
+Changes:
+Branch name repository, implements JDBCTemplate, and DAO abstraction layer, 
+
+* git checkout repository
               
