@@ -1,5 +1,8 @@
 package cl.zbsys.services;
 
+import cl.zbsys.dao.ResultadoDAO;
+import cl.zbsys.domain.Resultado;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +13,10 @@ import java.util.List;
  */
 @Service
 public class OperatoriaServiceImpl implements OperatoriaService {
+
+    @Autowired
+    ResultadoDAO resultadoDAO;
+
     @Override
     public int suma(int a, int b) {
         return a + b;
@@ -35,5 +42,11 @@ public class OperatoriaServiceImpl implements OperatoriaService {
             if (counter == 2) primos.add(i);
         }
         return primos;
+    }
+
+    @Override
+    public List<Resultado> obtenerResultados() {
+        //alguna logica extra
+        return resultadoDAO.getAllResults();
     }
 }

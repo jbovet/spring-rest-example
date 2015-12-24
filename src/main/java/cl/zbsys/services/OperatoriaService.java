@@ -1,5 +1,7 @@
 package cl.zbsys.services;
 
+import cl.zbsys.domain.Resultado;
+
 import java.util.List;
 
 /**
@@ -19,5 +21,7 @@ public interface OperatoriaService {
      */
     List<Integer> generarPrimos();
 
+
+    List<Resultado> obtenerResultados();
 
 }

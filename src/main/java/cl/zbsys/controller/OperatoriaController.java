@@ -1,6 +1,7 @@
 package cl.zbsys.controller;
 
 import cl.zbsys.domain.Parametros;
+import cl.zbsys.domain.Resultado;
 import cl.zbsys.exceptions.OperationException;
 import cl.zbsys.services.OperatoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,13 @@ public class OperatoriaController {
     public ResponseEntity<List<Integer>> listaPrimos() throws OperationException {
         List<Integer> lista = operatoriaService.generarPrimos();
         return new ResponseEntity<List<Integer>>(lista, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/listar", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<List<Resultado>> listarResultados() throws OperationException {
+        List<Resultado> resultados = operatoriaService.obtenerResultados();
+        return new ResponseEntity<List<Resultado>>(resultados, HttpStatus.OK);
     }
 
 
