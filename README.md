@@ -11,11 +11,11 @@ or you can
 
 After running bootRun, just test:
 
-		sum curl: --data '{"a":"12222", "b":"3332"}' -v -X POST -H 'Content-Type:application/json' http://localhost:8080/suma
+		sum: curl --data '{"a":"12222", "b":"3332"}' -v -X POST -H 'Content-Type:application/json' http://localhost:8888/suma
 		
-        subtract: curl --data '{"a":"12222", "b":"3332"}' -v -X POST -H 'Content-Type:application/json' http://localhost:8080/resta
+        subtract: curl --data '{"a":"12222", "b":"3332"}' -v -X POST -H 'Content-Type:application/json' http://localhost:8888/resta
         
-        prime list: curl -v http://localhost:8080/listarPrimos
+        prime list: curl -v http://localhost:8888/listarPrimos
               
 Changes: Branch name repository, implements JDBCTemplate, and DAO abstraction layer,
 
